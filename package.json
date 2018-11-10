@@ -1,0 +1,22 @@
+{
+  "name": "raspinodejstests",
+  "version": "1.0.0",
+  "description": "Tests for use Raspberry Pi and Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microhobby/raspiNodeJSTests.git"
+  },
+  "author": "Matheus Castello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/microhobby/raspiNodeJSTests/issues"
+  },
+  "homepage": "https://github.com/microhobby/raspiNodeJSTests#readme",
+  "dependencies": {
+    "onoff": "^3.2.2"
+  }
+}
