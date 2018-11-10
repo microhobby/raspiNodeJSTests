@@ -1,5 +1,5 @@
 
-const gpio = require("onoff").Gpio;
+const Gpio = require("onoff").Gpio;
 
 /* setup */
 const yesLed = new Gpio(17, "out");
