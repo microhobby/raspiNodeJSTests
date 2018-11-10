@@ -6,7 +6,7 @@ const oldVotes = {
 };
 
 module.exports= {
-	startPolling: function(yesLed, noLed) {
+	startPolling: function(D17, D27) {
 		setInterval(function() {
 		http.get("http://microhobby.com.br/safira2/vote.php", 
 			function(res) {
@@ -26,28 +26,28 @@ module.exports= {
 					console.log(decd);
 
 					if (oldVotes.yes != decd.yes) {
-						noLed.writeSync(0);
-						yesLed.writeSync(0);
+						D27.reset();
+						D17.reset();
 						
 						oldVotes.yes = decd.yes;
-						D23.blinkXTimes(3, function() {
+						D17.blinkXTimes(3, function() {
 							if (decd.yes > decd.no)
-								yesLed.writeSync(1);
+								D17.set();
 							else
-								noLed.writeSync(1);
+								D27.set();
 						});
 					}
 
 					if (oldVotes.no != decd.no) {
-						noLed.writeSync(0);
-						yesLed.writeSync(0);
+						D27.reset();
+						D17.reset();
 						
 						oldVotes.no = decd.no;
-						D33.blinkXTimes(3,function() {
+						D27.blinkXTimes(3, function() {
 							if (decd.no > decd.yes)
-								noLed.writeSync(1);
+								D27.set();
 							else
-								yesLed.writeSync(1);
+								D17.set();
 						});
 					}
 

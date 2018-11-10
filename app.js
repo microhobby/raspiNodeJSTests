@@ -9,4 +9,4 @@ const D27 = new Pin(27);
 D27.mode("out");
 D17.mode("out");
 
-wifi.startPolling(yesLed, noLed);
+wifi.startPolling(D17, D27);
