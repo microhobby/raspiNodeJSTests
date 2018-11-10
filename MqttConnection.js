@@ -32,7 +32,7 @@ exports.MqttConnection = function(topic) {
 			if(msgTopic == topic) {
 				console.log("Message: " + message);
 				if (me.onMessageArrived)
-					me.onMessageArrived(msg);
+					me.onMessageArrived(message);
 			}
 		});
 	};
