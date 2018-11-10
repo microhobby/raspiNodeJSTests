@@ -1,8 +1,9 @@
 
 const Gpio = require("onoff").Gpio;
+const wifi = require("./wifi");
 
-/* setup */
+/* setup pins */
 const yesLed = new Gpio(17, "out");
 const noLed = new Gpio(27, "out");
 
-yesLed.writeSync(true);
+wifi.startPolling();
