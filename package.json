@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/microhobby/raspiNodeJSTests#readme",
   "dependencies": {
+    "mqtt": "^2.18.8",
     "onoff": "^3.2.2"
   }
 }
