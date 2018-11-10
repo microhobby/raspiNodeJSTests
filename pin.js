@@ -1,7 +1,7 @@
 
 const Gpio = require("onoff").Gpio;
 
-exports.Pin = function(pin, edge, debounce) {
+exports.Pin = function(pin) {
 	const pinNumber = pin;
 	var gpioObject = null;
 
@@ -10,7 +10,7 @@ exports.Pin = function(pin, edge, debounce) {
 
 	this.blinkInterval = { id: 0 };
 
-	this.mode = function(direction) {
+	this.mode = function(direction, edge, debounce) {
 		if (!edge && !debounce)
 			gpioObject = new Gpio(pinNumber, direction);
 		else if(!debounce)
