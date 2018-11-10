@@ -52,7 +52,7 @@ module.exports= {
 					}
 
 					/* again */
-					exports.startPolling();
+					module.exports.startPolling();
 				});
 			}
 		);
