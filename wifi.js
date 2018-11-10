@@ -7,7 +7,7 @@ const oldVotes = {
 
 module.exports= {
 	startPolling: function(D17, D27) {
-		setInterval(function() {
+		setTimeout(function() {
 		http.get("http://microhobby.com.br/safira2/vote.php", 
 			function(res) {
 		
