@@ -1,6 +1,8 @@
 
-var gpio = require("rpi-gpio");
+const gpio = require("onoff").Gpio;
 
 /* setup */
-gpio.setup(17, gpio.DIR_OUT);
-gpio.write(17, true);
+const yesLed = new Gpio(17, "out");
+const noLed = new Gpio(27, "out");
+
+yesLed.writeSync(true);
