@@ -23,7 +23,8 @@ exports.Pin = function(pin) {
 	};
 
 	this.toggle = function() {
-		gpioObject.writeSync(!gpioObject.readSync());
+		var pinVal = gpioObject.readSync();
+		gpioObject.writeSync(!pinVal ? 1 : 0);
 	};
 
 	this.blinkXTimes = function(times, onEnd) {
