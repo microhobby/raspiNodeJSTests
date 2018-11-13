@@ -3,4 +3,6 @@ const Gpio = require("onoff").Gpio;
 
 var pin = new Gpio(17, "out");
 
-pin.writeSync(process.argv[1]);
+setInterval(function() {
+	pin.writeSync(!pin.readSync());
+}, 200);
